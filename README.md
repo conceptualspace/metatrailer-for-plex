@@ -7,6 +7,4 @@ Your library is not modified in any way, the plugin just adds a link to the trai
 ![alt tag](https://raw.githubusercontent.com/conceptualspace/metatrailer-for-plex/master/plex-logo-flat-small.png)
 ![alt tag](https://raw.githubusercontent.com/conceptualspace/metatrailer-for-plex/master/screenshot.png)
 
----
-
 *Plex, the Plex Play logo and Plex Media Server are trademarks of Plex and used under a license.
