@@ -3,16 +3,17 @@
 
   "name": "metatrailer for plex",
   "description": "adds movie trailers to plex",
-  "version": "1.4",
+  "version": "1.5",
   "author": "dev@conceptualspace.net",
   "permissions": [
     "*://app.plex.tv/*",
-    "*://localhost/*"
+    "*://localhost/*",
+    "<all_urls>"
   ],
   "content_scripts": [
     {
-      "matches": ["*://app.plex.tv/*", "*://localhost/*"],
-      "js": ["jquery-3.3.1.min.js", "arrive.min.js", "content_script.js"],
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.5.1.slim.min.js", "arrive.min.js", "content_script.js"],
       "all_frames": true,
       "run_at": "document_idle"
     }
