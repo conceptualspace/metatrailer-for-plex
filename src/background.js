@@ -20,6 +20,7 @@ function handleInstalled(details) {
 
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
     //if (temporary) return; // skip during development
+    browser.runtime.setUninstallURL("");
     const url = browser.runtime.getURL("updated.html");
     browser.tabs.create({ url });
 });
