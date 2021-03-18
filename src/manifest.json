@@ -3,7 +3,7 @@
 
   "name": "metatrailer for plex",
   "description": "adds movie trailers to plex",
-  "version": "1.9",
+  "version": "1.10",
   "author": "dev@conceptualspace.net",
   "permissions": [
     "*://app.plex.tv/*",

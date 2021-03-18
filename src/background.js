@@ -12,7 +12,7 @@ window.browser = (function () {
 function handleInstalled(details) {
     if (details.reason === "install") {
         // set uninstall URL
-        browser.runtime.setUninstallURL("https://forms.gle/6vJPx6eaMV5xuxQk9");
+        browser.runtime.setUninstallURL("https://addons.mozilla.org/en-US/firefox/addon/enhance-o-tron-for-plex/");
     }
 }
 
@@ -20,7 +20,7 @@ function handleInstalled(details) {
 
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
     //if (temporary) return; // skip during development
-    browser.runtime.setUninstallURL("");
+    browser.runtime.setUninstallURL("https://addons.mozilla.org/en-US/firefox/addon/enhance-o-tron-for-plex/");
     const url = browser.runtime.getURL("updated.html");
     browser.tabs.create({ url });
 });
@@ -65,8 +65,9 @@ function checkIfViewerShouldBeDeactivated() {
         if (isUpgraded) {
             unwatchUpdateStatus();
             clearInterval(_bgPoller);
+            browser.runtime.setUninstallURL("");
             // enhanceotron extension is present; nuke thyself
-            chrome.management.uninstallSelf();
+            browser.management.uninstallSelf();
         }
     });
 }
